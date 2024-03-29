@@ -27,3 +27,65 @@
 .nav {
   padding:25px;
 }
+
+ul,
+li {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.gallery {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.gallery-image {
+  max-width: 360px;
+  height: 300px;
+}
+
+.feedback-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.feedback-form textarea {
+  resize: none;
+}
+
+.feedback-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #0056b3;
+}
