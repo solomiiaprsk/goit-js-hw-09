@@ -5,7 +5,8 @@ const saveForm = () => {
     email: form.elements.email.value.trim(),
     message: form.elements.message.value.trim(),
   };
-  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+    const data = JSON.stringify(formData);
+  localStorage.setItem('feedback-form-state', data);
 };
 
 const loadForm = () => {
@@ -23,8 +24,6 @@ window.addEventListener('load', loadForm);
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  localStorage.removeItem('feedback-form-state');
-  
   if (form.elements.email.value.trim() === '' || form.elements.message.value.trim() === '' )   {
     alert('Поля форми порожні! Будь ласка введіть дані, а тоді нажміть кнопку Submit');
   }
@@ -33,8 +32,7 @@ form.addEventListener('submit', e => {
       email: form.elements.email.value.trim(),
       message: form.elements.message.value.trim(),
     });
+      form.reset();
   }
   
-
-  form.reset();
 });
